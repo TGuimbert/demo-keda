@@ -12,5 +12,7 @@ k exec -it -n kafka kafka-0 -- bash
 # kafka-consumer-groups --bootstrap-server kafka-0.kafka-headless.kafka.svc.cluster.local:9092 --describe --group my-group
 export KO_DOCKER_REPO=ttl.sh
 ko apply -f deployment.yaml
+k9s
 k apply -f scaledObject.yaml
+kind delete cluster
 ```
